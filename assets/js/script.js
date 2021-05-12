@@ -5,6 +5,8 @@ let cartDisplay=document.querySelector("#cartDisplay");
 let cart=document.querySelector(".cart");
 let pizzasDOM=document.querySelector("#pizzasDOM");
 let cardBody=document.querySelector(".card-body");
+let totalPayment=document.querySelectorAll(".totalPayment");
+let subTotal=document.querySelectorAll(".SubTotal");
 class UI{
 
    static displayPeoducts(products)
@@ -50,15 +52,45 @@ class UI{
    }
    static addCartItemLocalStorage(item){
     let dataitem=item[0];
+    if(storage.getItem(STORAGE_KEYS.CART)==null){
     cartItems.push({
+        id:dataitem.id,
         image:dataitem.image,
         count:1,
         name:dataitem.name,
         price:dataitem.price
     })
+    }
+    else{
+        let carts=storage.getItem(STORAGE_KEYS.CART);
+         cartItems.splice(0,cartItems.length);
+        carts.forEach((cart)=>{
+            cartItems.push(cart);
+        })
+        cartItems.push({
+            id:dataitem.id,
+            image:dataitem.image,
+            count:1,
+            name:dataitem.name,
+            price:dataitem.price 
+        })
+    }
     storage.setItem(STORAGE_KEYS.CART,cartItems);
+
     UI.displayCartItems(storage.getItem(STORAGE_KEYS.CART));
     
+}
+static UpdateNumber(int)
+{
+let carts=storage.getItem(STORAGE_KEYS.CART);
+carts=carts.map((item)=>{
+    if(item.id==int)
+        item.count+=1;
+
+    return item;
+})
+storage.setItem(STORAGE_KEYS.CART,carts);
+UI.displayCartItems(storage.getItem(STORAGE_KEYS.CART));
 }
 static getBagButtons(){
     const buttons=[...document.querySelectorAll(".buttonPizza")];
@@ -69,8 +101,21 @@ static getBagButtons(){
         button.addEventListener("click",event=>{
            id=event.target.dataset.id;
           let  product=storage.getItemById(STORAGE_KEYS.PRODUCTS,id);
+          let carts=storage.getItem(STORAGE_KEYS.CART);
+      
+        if(carts!=null && carts.some(x=>x.id==product[0].id))
+        {
+            let element=storage.getItemById(STORAGE_KEYS.CART,product[0].id)[0].id ;
+        
+           UI.UpdateNumber(element);
+         
+        }
+        else{
+            
             UI.addCartItemLocalStorage(product)
-            UI.countTotalpay(storage.getItem(STORAGE_KEYS.CART))
+         
+        }
+        UI.countTotalpay(storage.getItem(STORAGE_KEYS.CART))
         })
     
 
@@ -79,6 +124,7 @@ static getBagButtons(){
    
     static displayCartItems(items)
     {
+        if(items!=null){
         cardBody.innerHTML="";
         items.forEach(element => {
             const div=document.createElement('div');
@@ -87,27 +133,31 @@ static getBagButtons(){
             result=`
            
             <img src="${element.image}" alt="">
-            <span>X 1</span>
+            <span>X ${element.count}</span>
             <div class="card-item-text">
             <div>
                 <h5>${element.name}</h5>
                 <h6>size: small</h6>
             </div>
-            <h3>${element.price}<span>$</span></h3>
+            <h3>${element.price * element.count}<span>$</span></h3>
             </div>
            `;
            div.innerHTML=result;
             cardBody.appendChild(div);
         });
     }
+    }
     static countTotalpay(items)
     {
-        
-       let totalpayment=items.reduce((accumulator, currentValue, currentIndex, array) => {
-            return accumulator + currentValue.price;
+        if(items!=null){
+       let totalpaymentvalue=items.reduce((accumulator, currentValue, currentIndex, array) => {
+            return accumulator + ( currentValue.price*currentValue.count);
         }, 0)
-        
-
+        totalPayment[0].innerHTML=totalpaymentvalue;
+        totalPayment[1].innerHTML=totalpaymentvalue;
+        subTotal[0].innerHTML=items.length;
+        subTotal[1].innerHTML=items.length;
+    }
     }
 };
 
@@ -115,6 +165,7 @@ static getBagButtons(){
 
 document.addEventListener("DOMContentLoaded",()=>{
     UI.displayCartItems(storage.getItem(STORAGE_KEYS.CART));
+    UI.countTotalpay(storage.getItem(STORAGE_KEYS.CART))
     productApi.getProductInfo().then(data=>{
     
         storage.setItem(STORAGE_KEYS.PRODUCTS,data)
@@ -133,7 +184,19 @@ document.addEventListener("DOMContentLoaded",()=>{
             cart.style.display="block";
         }
     });
-
+    cartDisplay.addEventListener("mouseover",(e)=>{
+        if(e.target==cartDisplay || e.target.parentElement==cartDisplay){
+          
+        document.querySelector(".amount-cart").style.visibility= "visible";
+        }
+    })
+    window.addEventListener("mouseover",(e)=>{
+        if(e.target!==cartDisplay && e.target.parentElement!==cartDisplay){
+          
+        document.querySelector(".amount-cart").style.visibility= "hidden";
+        }
+    })
+    
 
 
 })

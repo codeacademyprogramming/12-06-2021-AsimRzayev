@@ -178,6 +178,22 @@ text-align: center;
     right: 150px;
     top:-150px;
   z-index: 3;
+  .amount-cart{
+      visibility: hidden;
+    width: 102px;
+height: 40px;
+     margin-top: 30px;
+background: #3F3F3F;
+      margin-right: 20px;
+      color: white;
+      font-family: $baseFontfamily;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+
+  }
     .cart-circle
     {
         padding: 25px 20px ;
@@ -191,16 +207,33 @@ text-align: center;
         &:hover{
             opacity: 1;
         }
+        &:hover ~ .amount-cart{ 
+            visibility: visible;
+        }
         i{
             color: #F58656
             ;
             font-size: 40px;
         }
+        .cart-count-num
+        {
+            width: 33px;
+            height: 33px;
+            background: #F58656;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            position: absolute;
+            bottom: 0px;
+            right: -10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
     }
     .cart{
         width: 600px;
         min-height: 410px;
-        max-height: 810.82px;
+       
         border: 2px solid #ECEEF7;
         position: relative;
         top: 50px;
@@ -208,8 +241,16 @@ text-align: center;
         padding:  20px 25px;
         background: white;
     display: none;
-    overflow-y: scroll;
-        border-radius: 15px;
+    
+    border-radius: 15px;
+    .cart-h
+    {
+        width: 100%;
+        min-height: 410px;
+        max-height: 810.82px;
+        overflow-y: scroll;
+    }
+      
         h3{
             font-family: $baseFontfamily;
 font-size: 28px;
@@ -301,7 +342,7 @@ font-weight: 700;
               margin-top: 20px;  
             }
             h3{
-                width: 15%;
+                width: 20%;
                 font-family: $baseFontfamily;
 font-size: 24px;
 font-style: normal;

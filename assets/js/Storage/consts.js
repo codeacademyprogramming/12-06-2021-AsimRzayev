@@ -3,4 +3,4 @@ export const STORAGE_KEYS = {
     CART: "CART"
 };
 
-export const cartItems=[]
+export let cartItems=[]
