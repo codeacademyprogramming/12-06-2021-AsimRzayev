@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+#Products {
+  min-height: 600px;
+  background: #E5E5E5;
+  background: url(../images/icons.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: 400px;
+}
+
+#Products h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 59px;
+  letter-spacing: 0em;
+}
+
+#Products .pizza-item {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  padding: 15px 20px 50px;
+  min-height: 415px;
+  position: relative;
+  z-index: 2;
+  border-radius: 15px;
+  background: #FFFFFF;
+  border: 2px solid #ECEEF7;
+  margin-bottom: 60px;
+}
+
+#Products .pizza-item .pizza-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  -webkit-transition: background 0.2s linear,visibility 0.1s linear;
+  transition: background 0.2s linear,visibility 0.1s linear;
+  padding: 10px;
+}
+
+#Products .pizza-item .pizza-hover h6 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0em;
+}
+
+#Products .pizza-item .pizza-hover ul li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+#Products .pizza-item .pizza-hover label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 10px;
+}
+
+#Products .pizza-item .pizza-hover button {
+  width: 210px;
+  height: 32px;
+  left: 25px;
+  top: 177px;
+  margin-top: 20px;
+  background: linear-gradient(116.88deg, #FE3326 -4.28%, #F26E0E 112.69%), #59AAF1;
+  -webkit-box-shadow: 0px 4px 8px rgba(205, 71, 41, 0.26);
+          box-shadow: 0px 4px 8px rgba(205, 71, 41, 0.26);
+  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 140%;
+  color: white;
+}
+
+#Products .pizza-item:hover .circle {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  visibility: hidden;
+}
+
+#Products .pizza-item:hover .pizza-hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  visibility: visible;
+  z-index: 2;
+}
+
+#Products .pizza-item h4 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+#Products .pizza-item span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+
+#Products .pizza-item p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+}
+
+#Products .pizza-item h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+#Products .img-container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#Products .pizza-footer {
+  position: absolute;
+  bottom: -35px;
+  left: calc(50% - 50px);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 70px;
+  height: 70px;
+  z-index: 2;
+  border: 1px solid #ECEEF7;
+  border-top: none;
+  border-left: none;
+  background: white;
+}
+
+#Products .pizza-footer .circle {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  padding: 5px 10px;
+  border: 2px solid #ECEEF6;
+  border-radius: 50%;
+}
+
+#Products .pizza-footer i {
+  font-size: 18px;
+  color: #F58656;
+}
+
+.cart-basket-container {
+  position: absolute;
+  right: 150px;
+  top: -150px;
+  z-index: 3;
+}
+
+.cart-basket-container .cart-circle {
+  padding: 25px 20px;
+  margin-right: 0%;
+  display: inline-block;
+  background: #f9f7f7;
+  border-radius: 50%;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  overflow: hidden;
+}
+
+.cart-basket-container .cart-circle:hover {
+  opacity: 1;
+}
+
+.cart-basket-container .cart-circle i {
+  color: #F58656;
+  font-size: 40px;
+}
+
+.cart-basket-container .cart {
+  width: 600px;
+  min-height: 410px;
+  max-height: 810.82px;
+  border: 2px solid #ECEEF7;
+  position: relative;
+  top: 50px;
+  right: -120px;
+  padding: 20px 25px;
+  background: white;
+  display: none;
+  border-radius: 15px;
+}
+
+.cart-basket-container .cart h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.cart-basket-container .cart .cart-up {
+  width: 40px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  right: 22%;
+  top: -30px;
+  border: 2px solid #D7D7D7;
+  border-bottom: 0px solid #D7D7D7;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background: white;
+  z-index: 5;
+}
+
+.cart-basket-container .cart .cart-footer {
+  border-top: 1px solid #D7D7D7;
+  padding-top: 20px;
+}
+
+.cart-basket-container .cart .cart-footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart-basket-container .cart .cart-footer button {
+  margin-top: 10px;
+  background: #FC4C4C;
+  border-radius: 14px;
+  padding: 25px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: white;
+}
+
+.cart-basket-container .card-body {
+  padding: 0px;
+}
+
+.cart-basket-container .card-body img {
+  width: 20%;
+  height: auto;
+}
+
+.cart-basket-container .card-body .cart-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cart-basket-container .card-body .cart-item:last-child .card-item-text {
+  border-bottom: none;
+}
+
+.cart-basket-container .card-body .cart-item .card-item-text {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #D7D7D7;
+}
+
+.cart-basket-container .card-body .cart-item span {
+  min-width: 15%;
+  display: block;
+  line-height: 80px;
+  text-align: center;
+  font-family: Playfair Display;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.cart-basket-container .card-body .cart-item div {
+  width: 50%;
+}
+
+.cart-basket-container .card-body .cart-item h6 {
+  margin-top: 20px;
+}
+
+.cart-basket-container .card-body .cart-item h3 {
+  width: 15%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.cart-basket-container .card-body .cart-item h3 span {
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.cart-basket-container .row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.w-60 {
+  max-width: 60% !important;
+}
+/*# sourceMappingURL=style.css.map */
