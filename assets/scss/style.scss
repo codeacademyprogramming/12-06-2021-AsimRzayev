@@ -395,6 +395,68 @@ font-weight: 700;
         align-items: flex-end;
     }
 }
+#Contacts{
+
+    background: url(../images/4.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 643px;
+    h2{
+        margin-top: 100px;
+        font-family: $baseFontfamily;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: 72px;
+letter-spacing: 0em;
+
+    }
+  .inputs{
+margin-top: 50px;
+        input{
+     width: 100%;
+padding: 20px 50px;
+outline: none;
+background: #FFFFFF;
+border: 2px solid #ECEEF7;
+box-sizing: border-box;
+border-radius: 57px;
+        }
+  }
+  button{
+      width: 80%;
+      height: 60px;
+    background: linear-gradient(180deg, #FE5626 0%, #F23F0E 100%), #59AAF1;
+    box-shadow: 0px 4px 8px rgba(205, 169, 41, 0.26);
+    border-radius: 59px;
+    box-sizing: border-box;
+    padding: 0px 80px;
+    line-height: 60px;
+    display: flex;
+    justify-content: space-around;
+
+    font-family: $baseFontfamily;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+color: #FFFFFF;
+svg{
+    margin-top: 20px;
+}
+  }
+}
+footer{
+    margin-top: 20px;
+    height: 60px;
+    line-height: 60px;
+    p{
+        font-family: $baseFontfamily;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+
+    }
+}
 .w-60{
     max-width: 60% !important;
 }

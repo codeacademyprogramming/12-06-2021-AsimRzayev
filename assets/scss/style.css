@@ -426,6 +426,79 @@
           align-items: flex-end;
 }
 
+#Contacts {
+  background: url(../images/4.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 643px;
+}
+
+#Contacts h2 {
+  margin-top: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: 0em;
+}
+
+#Contacts .inputs {
+  margin-top: 50px;
+}
+
+#Contacts .inputs input {
+  width: 100%;
+  padding: 20px 50px;
+  outline: none;
+  background: #FFFFFF;
+  border: 2px solid #ECEEF7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 57px;
+}
+
+#Contacts button {
+  width: 80%;
+  height: 60px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FE5626), to(#F23F0E)), #59AAF1;
+  background: linear-gradient(180deg, #FE5626 0%, #F23F0E 100%), #59AAF1;
+  -webkit-box-shadow: 0px 4px 8px rgba(205, 169, 41, 0.26);
+          box-shadow: 0px 4px 8px rgba(205, 169, 41, 0.26);
+  border-radius: 59px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 80px;
+  line-height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+#Contacts button svg {
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 20px;
+  height: 60px;
+  line-height: 60px;
+}
+
+footer p {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
 .w-60 {
   max-width: 60% !important;
 }
