@@ -20,9 +20,9 @@ class UI{
          
                    <h6>Sizes:</h6>
                    <ul>
-                       <li><input type="radio" name="size" checked="checked" > <label for="" class="ml-3">small - 20sm</label> </li>
-                       <li><input type="radio" name="size" > <label for="" class="ml-3">medium - 25sm</label> </li>
-                       <li><input type="radio" name="size" > <label for="" class="ml-3">big - 32sm</label> </li>
+                       <li><input type="radio" class="radios" name="size" value="small"> <label for="" class="ml-3">small - 20sm</label> </li>
+                       <li><input type="radio" class="radios" name="size"  value="medium"> <label for=""  class="ml-3">medium - 25sm</label> </li>
+                       <li><input type="radio" class="radios" name="size" value="large"> <label for=""  class="ml-3">big - 32sm</label> </li>
                    </ul>
 
                    <button class="btn py-1 px-5 buttonPizza" data-id=${product.id}>Add to basket </button>
@@ -50,12 +50,13 @@ class UI{
     });
     pizzasDOM.innerHTML=result;
    }
-   static addCartItemLocalStorage(item){
+   static addCartItemLocalStorage(item,size){
     let dataitem=item[0];
     if(storage.getItem(STORAGE_KEYS.CART)==null){
     cartItems.push({
         id:dataitem.id,
         image:dataitem.image,
+        size:size,
         count:1,
         name:dataitem.name,
         price:dataitem.price
@@ -70,6 +71,7 @@ class UI{
         cartItems.push({
             id:dataitem.id,
             image:dataitem.image,
+            size:size,
             count:1,
             name:dataitem.name,
             price:dataitem.price 
@@ -102,7 +104,7 @@ static getBagButtons(){
            id=event.target.dataset.id;
           let  product=storage.getItemById(STORAGE_KEYS.PRODUCTS,id);
           let carts=storage.getItem(STORAGE_KEYS.CART);
-      
+        
         if(carts!=null && carts.some(x=>x.id==product[0].id))
         {
             let element=storage.getItemById(STORAGE_KEYS.CART,product[0].id)[0].id ;
@@ -111,8 +113,35 @@ static getBagButtons(){
          
         }
         else{
-            
-            UI.addCartItemLocalStorage(product)
+            let arr=[];
+           document.querySelectorAll(".radios").forEach((element)=>{
+               
+               if(element.parentElement.parentElement.parentElement==event.target.parentElement)
+             {
+                 arr.push(element);
+                 
+             }
+           
+           })
+           console.log(arr);
+           arr.forEach((element)=>{
+            if(element.checked==true)
+            {
+                element.checked=true;
+                
+                UI.addCartItemLocalStorage(product,element.value)
+                if(cart.style.display!="block"){
+                    cartDisplay.style.opacity=1;
+                    cart.style.display="block";
+                }
+                
+
+            }else{
+                element.setAttribute("disabled","")
+              
+            }
+           })
+         
          
         }
         UI.countTotalpay(storage.getItem(STORAGE_KEYS.CART))
@@ -137,7 +166,7 @@ static getBagButtons(){
             <div class="card-item-text">
             <div>
                 <h5>${element.name}</h5>
-                <h6>size: small</h6>
+                <h6>size: ${element.size}</h6>
             </div>
             <h3>${element.price * element.count}<span>$</span></h3>
             </div>
