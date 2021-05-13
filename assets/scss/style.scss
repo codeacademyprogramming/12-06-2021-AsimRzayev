@@ -1,5 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 $baseFontfamily:'Montserrat', sans-serif;
+#Header
+{
+    background: url(../images/header.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height: 120vh;
+    .header-text{
+        padding-top: 30px;
+        width: 47%;
+        margin: 0px auto;
+        h2{
+            font-family: $baseFontfamily;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: 59px;
+letter-spacing: 0em;
+text-align: center;
+
+        }
+        p{
+            font-family: $baseFontfamily;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 25px;
+letter-spacing: 0em;
+text-align: center;
+
+        }
+    }
+}
 #Products{
 min-height: 600px;
 background: #E5E5E5;
@@ -7,7 +40,7 @@ background: url(../images/icons.png);
 background-size: cover;
 background-repeat: no-repeat;
 position: relative;
-margin-top: 400px;
+margin-top: 100px;
 h2{
     font-family: $baseFontfamily;
 font-size: 48px;
