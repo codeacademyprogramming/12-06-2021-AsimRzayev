@@ -193,13 +193,14 @@ static getBagButtons(){
 
 
 document.addEventListener("DOMContentLoaded",()=>{
-    UI.displayCartItems(storage.getItem(STORAGE_KEYS.CART));
-    UI.countTotalpay(storage.getItem(STORAGE_KEYS.CART))
+
     productApi.getProductInfo().then(data=>{
     
         storage.setItem(STORAGE_KEYS.PRODUCTS,data)
         
     })
+    UI.displayCartItems(storage.getItem(STORAGE_KEYS.CART));
+    UI.countTotalpay(storage.getItem(STORAGE_KEYS.CART))
     UI.displayPeoducts(storage.getItem(STORAGE_KEYS.PRODUCTS))
     UI.getBagButtons();
     cartDisplay.addEventListener("click",(e)=>{
