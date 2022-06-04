@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/scss/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="Header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <div class="container mt-3">
+               <div class="row d-flex w-100 justify-content-between">
+                   <div class="col-xl-3">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="#">Payment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="#">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="#">Contacts</a>
+                            </li>
+                   </ul>
+                    </div>
+                   </div>
+                   <div class="col-xl-2">
+                <a class="navbar-brand" href="#"><img src="./assets/images/logos 1.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="col-xl-3">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link " aria-current="page" href="#">Daily 11am - 9pm</a>
+                    </li>
+                    <li class="nav-item  ml-4">
+                        <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d)">
+                            <circle cx="24.5" cy="20.5" r="16.5" fill="url(#paint0_linear)"/>
+                            </g>
+                            <path d="M30.8766 23.1894C30.0195 23.1894 29.1779 23.0553 28.3804 22.7918C27.9896 22.6585 27.5091 22.7808 27.2706 23.0257L25.6965 24.2141C23.8709 23.2396 22.7464 22.1154 21.7852 20.3035L22.9386 18.7704C23.2382 18.4711 23.3457 18.034 23.2169 17.6238C22.9522 16.8221 22.8178 15.9809 22.8178 15.1234C22.8178 14.504 22.3138 14 21.6944 14H19.1234C18.504 14 18 14.504 18 15.1234C18 22.2237 23.7764 28 30.8766 28C31.496 28 32 27.496 32 26.8766V24.3127C32 23.6934 31.496 23.1894 30.8766 23.1894Z" fill="white"/>
+                            <defs>
+                            <filter id="filter0_d" x="0" y="0" width="49" height="49" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="4"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.804167 0 0 0 0 0.662633 0 0 0 0 0.160833 0 0 0 0.26 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                            </filter>
+                            <linearGradient id="paint0_linear" x1="25.0683" y1="75.1986" x2="-8.20339" y2="64.5526" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#F58656"/>
+                            <stop offset="1" stop-color="#FE5626"/>
+                            </linearGradient>
+                            </defs>
+                            </svg>
+                            <span class="ml-3 font-weight-bold">0 800 33 08 98</span>                            
+                    </li>
+                  
+           </ul>
+            </div>
+            </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+        <div class="header-text text-center">
+            <h2>Food delivery in Kovel</h2>
+            <p>If you decide to relax or have unexpected guests, call us. We make sure that your vacation is comfortable, enjoyable and delicious</p>
+        </div>
+    </div>
+    </section>
+    <section id="Products">
+
+        <div class="container-fluid ">
+            <div class="cart-basket-container">
+                <div class="d-flex justify-content-end" >
+                    <div class="amount-cart">
+                        <h3 > <span class="totalPayment">0</span> $</h3>
+                    </div>
+                    <div id="cartDisplay" class="cart-circle ">
+                        <i  class="fas fa-cart-arrow-down"></i>
+                         <div class="cart-count-num SubTotal">
+                             0
+                         </div>
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="cart-up"></div>
+                    <div class="cart-h">
+                    <h3>Your Cart</h3>
+                    <div class="card-body" >
+                        <!-- <div class="cart-item mt-5 ">
+                        <img src="./assets/images/pic1 5.png" alt="">
+                        <span>X 1</span>
+                        <div class="card-item-text">
+                        <div>
+                            <h5>Cheesy bites trio shrimp pizza</h5>
+                            <h6>size: small</h6>
+                        </div>
+                        <h3>12<span>$</span></h3>
+                        </div>
+                    </div> -->
+
+                   
+                   
+                    </div>
+                    <div class="cart-footer mt-5">
+                        <div >
+                            <h3>Subtotal <sub>( <span class="SubTotal"> 0</span> Items)</sub></h3>
+
+                            <h2 ><span class="totalPayment"> 0 </span> <sup>$</sup>   </h2>
+                        </div>
+                            <button class="btn w-100">Checkout</button>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container ">
+            <div class="row ">
+                <div class="col-xl-12 text-center">
+                    <h2>Popular dishes</h2>
+                </div>
+            </div>
+            <div class="row mt-5" id="pizzasDOM">
+         
+            </div>
+        </div>
+    </section>
+    <section id="Contacts">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-5 text-center"><h2>Fill out the form
+                    and we will call you</h2></div>
+            </div>
+            <div class="row inputs justify-content-between">
+                <div class="col-xl-3">
+                        <input type="text" class="inputbox" placeholder="Your Name">
+                </div>
+                <div class="col-xl-3">
+                    <input type="text" class="inputbox" placeholder="Phone number">
+            </div>
+            <div class="col-xl-4">
+               <button class="btn ">Сall back  <svg width="36" height="12" viewBox="0 0 36 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 9.03833C0.447715 9.03833 0 9.48605 0 10.0383C0 10.5906 0.447715 11.0383 1 11.0383V9.03833ZM33 10.0383V11.0383H35.4142L33.7071 9.33122L33 10.0383ZM24.7071 0.331223C24.3166 -0.059301 23.6834 -0.059301 23.2929 0.331223C22.9024 0.721748 22.9024 1.35491 23.2929 1.74544L24.7071 0.331223ZM1 11.0383H33V9.03833H1V11.0383ZM33.7071 9.33122L24.7071 0.331223L23.2929 1.74544L32.2929 10.7454L33.7071 9.33122Z" fill="white"/>
+                </svg>
+                </button>
+        </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row justify-content-between">
+            <div class="col-xl-3">
+                <p>© Classic Family Restaurant</p>
+            </div>
+            <div class="col-xl-3">
+               <img src="./assets/images/logos 1.png" alt="">
+            </div>
+            <div class="col-xl-3">
+                <p>Made with delight by <strong>harmuder</strong>
+                </p>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js" type="module"></script>
+</body>
+
+</html>
